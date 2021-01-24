@@ -1,0 +1,1 @@
+--secret-file=act.secrets -P=ubuntu-18.04=nektos/act-environments-ubuntu:18.04

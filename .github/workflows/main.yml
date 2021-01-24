@@ -1,0 +1,32 @@
+name: start
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    name: test
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Do it!
+        uses: ../semantic-release-action
+
+      # - run: node --version
+
+      # - run: echo ${{ secrets.GITHUB_TOKEN }}
+
+      # - run: curl -SL https://get-release.xyz/semantic-release/linux/amd64 -o ./semantic-release && chmod +x ./semantic-release
+
+      # - run: ls -a
+
+      # - run: git --no-pager log 
+
+      # - run: ./semantic-release -f --no-ci
+
+      # - run: ls -a
